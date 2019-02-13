@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yi.dao.ArticleMapper">
+
+    <insert id="addArticle" parameterType="Article">
+        INSERT INTO tb_article(id,title,content,createtime) VALUES(#{id},#{title},#{content},#{createtime});
+    </insert>
+
+    <select id="findAll" resultType="Article">
+        SELECT * FROM tb_article
+    </select>
+</mapper>
